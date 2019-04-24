@@ -7,7 +7,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
-
+import { BsDropdownModule } from "ngx-bootstrap";
 // Components
 import { AppComponent } from "./app.component";
 import { CountriesComponent } from "./countries/countries.component";
@@ -24,7 +24,7 @@ import { RegisterComponent } from "./register/register.component";
     HomeComponent,
     RegisterComponent
   ],
-  imports: [BrowserModule, HttpClientModule, FormsModule],
+  imports: [BrowserModule, HttpClientModule, FormsModule, BsDropdownModule.forRoot()],
   providers: [AuthService, ErrorInterceptorProvider, AlertifyService],
   bootstrap: [AppComponent]
 })
