@@ -15,17 +15,34 @@ import { NavComponent } from "./nav/nav.component";
 import { AuthService } from "./services/auth.service";
 import { HomeComponent } from "./home/home.component";
 import { RegisterComponent } from "./register/register.component";
+import { CountryListComponent } from './country-list/country-list.component';
+import { ListsComponent } from './lists/lists.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CountriesComponent,
-    NavComponent,
-    HomeComponent,
-    RegisterComponent
-  ],
-  imports: [BrowserModule, HttpClientModule, FormsModule, BsDropdownModule.forRoot()],
-  providers: [AuthService, ErrorInterceptorProvider, AlertifyService],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      CountriesComponent,
+      NavComponent,
+      HomeComponent,
+      RegisterComponent,
+      CountryListComponent,
+      ListsComponent,
+      MessagesComponent
+   ],
+   imports: [
+      BrowserModule,
+      HttpClientModule,
+      FormsModule,
+      BsDropdownModule.forRoot()
+   ],
+   providers: [
+      AuthService,
+      ErrorInterceptorProvider,
+      AlertifyService
+   ],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule {}
