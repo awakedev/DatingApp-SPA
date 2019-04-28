@@ -1,3 +1,4 @@
+import { appRoutes } from './../../routes';
 // Services & Providers
 import { AlertifyService } from "./services/alertify.service";
 import { ErrorInterceptorProvider } from "./services/error.interceptor";
@@ -8,6 +9,8 @@ import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 import { BsDropdownModule } from "ngx-bootstrap";
+import { RouterModule } from "@angular/router";
+
 // Components
 import { AppComponent } from "./app.component";
 import { CountriesComponent } from "./countries/countries.component";
@@ -34,7 +37,8 @@ import { MessagesComponent } from './messages/messages.component';
       BrowserModule,
       HttpClientModule,
       FormsModule,
-      BsDropdownModule.forRoot()
+      BsDropdownModule.forRoot(),
+      RouterModule.forRoot(appRoutes)
    ],
    providers: [
       AuthService,

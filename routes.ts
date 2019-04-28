@@ -6,7 +6,7 @@ import { MessagesComponent } from 'src/app/messages/messages.component';
 
 export const appRoutes: Routes = [
   { path: "home", component: HomeComponent },
-  { path: "country", component: CountryListComponent },
+  { path: "countries", component: CountryListComponent },
   { path: "messages", component: MessagesComponent },
   { path: "lists", component: ListsComponent },
   { path: "**", redirectTo: 'home', pathMatch: 'full' }
