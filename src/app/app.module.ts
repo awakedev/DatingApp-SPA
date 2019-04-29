@@ -1,3 +1,4 @@
+import { AuthGuard } from './guards/auth.guard';
 import { appRoutes } from './../../routes';
 // Services & Providers
 import { AlertifyService } from "./services/alertify.service";
@@ -43,7 +44,8 @@ import { MessagesComponent } from './messages/messages.component';
    providers: [
       AuthService,
       ErrorInterceptorProvider,
-      AlertifyService
+      AlertifyService,
+      AuthGuard
    ],
    bootstrap: [
       AppComponent
